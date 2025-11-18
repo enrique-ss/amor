@@ -220,21 +220,27 @@ body {
 }
 
 .letter-button {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    color: #d63447;
-    border: 2px solid #d63447;
-    padding: 15px 30px;
-    font-size: 1.1em;
+    background: linear-gradient(135deg, #d63447 0%, #ff6b9d 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.3em;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(214, 52, 71, 0.4);
     font-weight: bold;
+    z-index: 2;
+    position: relative;
 }
 
 .letter-button:hover {
-    background: #d63447;
-    color: white;
     transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(214, 52, 71, 0.6);
+}
+
+.letter-button:active {
+    transform: scale(0.98);
 }
 
 /* Modal */
