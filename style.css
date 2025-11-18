@@ -380,7 +380,7 @@ body {
 /* Galeria */
 .gallery-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
     margin-bottom: 40px;
     z-index: 2;
     position: relative;
