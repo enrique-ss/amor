@@ -5,27 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Nosso Amor</title>
-    
 </head>
 <body>
-    <div class="timer-container">
-        <h1>Há<span class="heart">♥</span></h1>
-        <div class="timer" id="timer">0 dias, 0 horas e 0 minutos</div>
-        <h1>com o amor da minha vida <span class="heart">♥</span></h1>
+    <!-- Corações animados flutuando -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- PÁGINA INICIAL -->
+    <div class="main-page" id="mainPage">
+        <!-- Cronômetro Principal -->
+        <div class="timer-container">
+            <h1>Há <span class="heart">♥</span></h1>
+            <div class="timer" id="timer">0 dias, 0 horas e 0 minutos</div>
+            <h1>com o amor da minha vida <span class="heart">♥</span></h1>
+        </div>
+
+        <!-- Foto Principal -->
+        <div class="polaroid main-polaroid">
+            <div class="photo-container">
+                <div class="photo-placeholder">
+                    Adicione sua foto aqui<br>
+                    (substitua a URL no código)
+                </div>
+                <!-- <img src="SUA_URL_DA_FOTO_AQUI" alt="Nós dois"> -->
+            </div>
+            <div class="caption">
+                O momento em que tudo começou ♥
+            </div>
+        </div>
+
+        <!-- Botão para ver mais -->
+        <button class="explore-button" id="exploreButton">
+            ✨ Explorar Nosso Amor ✨
+        </button>
     </div>
 
-    <div class="polaroid">
-        <div class="photo-container">
-            <div class="photo-placeholder">
-                Adicione sua foto aqui<br>
-                (substitua a URL no código)
-            </div>
-            <!-- <img src="SUA_URL_DA_FOTO_AQUI" alt="Nós dois"> -->
+    <!-- PÁGINA DE FUNCIONALIDADES -->
+    <div class="features-page" id="featuresPage" style="display: none;">
+        <!-- Botão Voltar -->
+        <button class="back-button" id="backButton">
+            ← Voltar
+        </button>
+
+        <!-- Contador Regressivo para Aniversário -->
+        <div class="countdown-container">
+            <h2>🎂 Próximo Aniversário em:</h2>
+            <div class="countdown" id="countdown">Calculando...</div>
         </div>
-        <div class="caption">
-            O momento em que tudo começou ♥
+
+        <!-- Contador de "Eu te amo" -->
+        <div class="love-counter-container">
+            <button class="love-button" id="loveButton">
+                💕 Eu te amo
+            </button>
+            <p class="love-count">Eu te amei <span id="loveCount">0</span> vezes</p>
+        </div>
+
+        <!-- Botão Carta de Amor -->
+        <div class="letter-container">
+            <button class="letter-button" id="letterButton">
+                💌 Abrir Carta de Amor
+            </button>
+        </div>
+
+        <!-- Modal da Carta -->
+        <div class="modal" id="letterModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>💕 Para o Amor da Minha Vida</h2>
+                <p class="letter-text">
+                    Meu amor,<br><br>
+                    Cada dia ao seu lado é um presente que agradeço. 
+                    Você transformou minha vida em algo mais colorido, 
+                    mais feliz e mais completo.<br><br>
+                    Te amo hoje, amanhã e sempre! ♥
+                </p>
+            </div>
+        </div>
+
+        <!-- Gerador de Motivos -->
+        <div class="reason-container">
+            <button class="reason-button" id="reasonButton">
+                🎲 Por que eu te amo?
+            </button>
+            <p class="reason-text" id="reasonText"></p>
+        </div>
+
+        <!-- Player de Música -->
+        <div class="music-container">
+            <h3>🎵 Nossa Música</h3>
+            <audio controls id="musicPlayer">
+                <source src="SUA_MUSICA_AQUI.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+            <p class="music-info">Adicione o arquivo de música ou URL no código</p>
+        </div>
+
+        <!-- Galeria de Fotos -->
+        <div class="gallery-container">
+            <h2>📸 Nossa Galeria</h2>
+            <div class="gallery-scroll" id="gallery">
+                <div class="polaroid">
+                    <div class="photo-container">
+                        <div class="photo-placeholder">Foto 1</div>
+                    </div>
+                    <div class="caption">Primeiro encontro ♥</div>
+                </div>
+                <div class="polaroid">
+                    <div class="photo-container">
+                        <div class="photo-placeholder">Foto 2</div>
+                    </div>
+                    <div class="caption">Nosso primeiro beijo ♥</div>
+                </div>
+                <div class="polaroid">
+                    <div class="photo-container">
+                        <div class="photo-placeholder">Foto 3</div>
+                    </div>
+                    <div class="caption">Viagem inesquecível ♥</div>
+                </div>
+                <div class="polaroid">
+                    <div class="photo-container">
+                        <div class="photo-placeholder">Foto 4</div>
+                    </div>
+                    <div class="caption">Momento especial ♥</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nossas Memórias -->
+        <div class="memories-container">
+            <h2>💭 Nossas Memórias</h2>
+            <div class="memory-card">
+                <div class="memory-date">04/12/2023</div>
+                <div class="memory-title">Nosso Primeiro Dia</div>
+                <div class="memory-description">O dia em que tudo começou...</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-date">XX/XX/XXXX</div>
+                <div class="memory-title">Primeira Viagem Juntos</div>
+                <div class="memory-description">Momentos inesquecíveis...</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-date">XX/XX/XXXX</div>
+                <div class="memory-title">Aniversário de 1 Ano</div>
+                <div class="memory-description">Celebrando nosso amor...</div>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
